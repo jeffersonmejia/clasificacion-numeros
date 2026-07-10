@@ -58,3 +58,9 @@ graph TD
 La aplicacion web esta desplegada en **GitHub Pages** usando el modelo generado desde notebook colab:
 
 > **https://jeffersonmejia.github.io/clasificacion-numeros/**
+
+---
+
+## Anexos
+
+- [Cuaderno en Google Colab](https://colab.research.google.com/github/jeffersonmejia/clasificacion-numeros/blob/main/P3Modelo_Numero_MejiaJefferson.ipynb)
