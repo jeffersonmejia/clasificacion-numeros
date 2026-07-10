@@ -40,6 +40,6 @@ Este proyecto implementa una red neuronal convolucional (CNN) para clasificar di
 
 ## 3. Despliegue
 
-La aplicacion web esta desplegada en **GitHub Pages**:
+La aplicacion web esta desplegada en **GitHub Pages** usando el modelo generado desde notebook colab:
 
 > **https://jeffersonmejia.github.io/clasificacion-numeros/**
