@@ -14,6 +14,21 @@ Este proyecto implementa una red neuronal convolucional (CNN) para clasificar di
 
 **Autor:** Jefferson Mejia
 
+### Arquitectura de la red
+
+```mermaid
+graph TD
+    A["Entrada\n28 x 28 x 1"] --> B["Conv2D\n32 filtros (3x3)\nReLU"]
+    B --> C["MaxPooling2D\n2 x 2"]
+    C --> D["Conv2D\n64 filtros (3x3)\nReLU"]
+    D --> E["MaxPooling2D\n2 x 2"]
+    E --> F["Dropout\n0.5"]
+    F --> G["Flatten\n5 x 5 x 64 = 1600"]
+    G --> H["Dense\n100 neuronas\nReLU"]
+    H --> I["Dense\n10 neuronas\nSoftmax"]
+    I --> J["Salida\ndigito 0-9"]
+```
+
 ---
 
 ## 2. Instalacion
