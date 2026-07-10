@@ -388,7 +388,7 @@
           if (!window.tf) throw new Error("No se cargó TensorFlow.js.");
           model = await tf.loadLayersModel(MODEL_URL);
           classifyButton.disabled = false;
-          setStatus("Modelo cargado. Dibuja un dígito del 0 al 9.");
+          setStatus("Modelo cargado.");
         } catch (error) {
           resultsEl.innerHTML = "";
           setStatus(`Error: ${error.message}`);
