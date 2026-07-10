@@ -617,32 +617,13 @@
       }
 
       function renderResults(predictions) {
-        const ranked = Array.from(predictions)
-          .map((value, index) => ({ label: CLASSES[index], value }))
-          .sort((a, b) => b.value - a.value);
-        const best = ranked[0];
-
-        const rows = ranked
-          .map((item) => {
-            const percent = item.value * 100;
-            return `
-          <div class="prediction">
-            <strong>${item.label}</strong>
-            <div class="bar"><span style="width:${percent.toFixed(2)}%"></span></div>
-            <span class="percent">${percent.toFixed(1)}%</span>
-          </div>
-        `;
-          })
-          .join("");
+        const bestIdx = predictions.indexOf(Math.max(...predictions));
 
         resultsEl.innerHTML = `
         <div class="result-summary">
           <span>Prediccion</span>
-          <strong>${best.label}</strong>
-          <small>${(best.value * 100).toFixed(1)}% de confianza</small>
-        </div>
-        <div class="probability-list">
-          ${rows}
+          <strong>${CLASSES[bestIdx]}</strong>
+          <small>${(predictions[bestIdx] * 100).toFixed(1)}% de confianza</small>
         </div>
       `;
       }
